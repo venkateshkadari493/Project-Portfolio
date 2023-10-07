@@ -1,4 +1,4 @@
-                             **SQL PROJECT ON OLYMPICS **
+                                                        SQL PROJECT ON OLYMPICS 
 
 
 
