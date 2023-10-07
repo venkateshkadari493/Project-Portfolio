@@ -1,1 +1,161 @@
+use ATHLETS;
+select * from athlete_events;
+select * from noc_regions;
 
+
+--Q1. HOW MANY OLYMPICS HAVE BEEN HELD
+select count(distinct Games) as Total_olympic_games
+from athlete_events;
+
+--Q2. NO. OF REGIONS IN THE DATASET
+select count(distinct region) as Total_regions
+from noc_regions;
+
+--Q3. LIST THE TOTAL NUMBER OF MALES AND FEMALES BY GENDER
+select sex, count(*) as TotalNo
+from athlete_events
+group by Sex;
+
+--Q4. LIST DOWN ALL OLYMPICS GAMES HELD SO FAR?
+select distinct games, city as All_olympic_games
+from athlete_events
+order by games desc;
+
+--Q5. HOW MANY ATHLETS WON GOLD MEDALS
+select count(distinct name)
+from athlete_events
+where medal = 'gold';
+
+--Q6. WHICH TEAMS PARTICIPATED IN 1992 summer GAMES?
+select Team, games,count(*) as gamecount
+from athlete_events
+where Games = '1992 summer'
+group by team,Games;
+
+--Q7. TOP 3 CITIES IN TERMS OF TOTAL NO OF MEDALS
+select  top 3 city, count(medal) as Total_medals
+from athlete_events
+group by city
+order by Total_medals desc;
+
+
+--Q8. TOP 5 SPORTS IN WHICH FEMALE ATHLETES HAVE WON THE MOST MEDALS?
+select top 5 sport, count(medal) as Total_medals
+from athlete_events
+where sex = 'f'
+group by sport
+order by Total_medals desc;
+
+--Q9. MENTION THE TOTAL NO OF NATIONS WHO PARTICIPATED IN EACH OLYMPIC GAME?
+with all_countries as
+(select region ,games from athlete_events as ev
+join noc_regions as nor
+on ev.noc = nor.noc)
+select games, count(region) as Total_countries
+from all_countries
+group by games
+order by games desc;
+
+---Q10. NO OF MALES VS FEMALES WHO WON MEDALS
+SELECT medal, sex, COUNT(*) AS MedalCount                 
+FROM athlete_events
+WHERE medal in ('gold', 'silver', 'bronze')
+GROUP BY medal, sex;
+
+
+---Q11. GOLD MEDALS FROM ATHLETES THAT AGE ABOVE OF 50
+SELECT sport, medal, COUNT(*) AS NumberofGolds
+FROM athlete_events
+WHERE medal = 'gold' AND age > 50
+GROUP BY sport, medal;
+
+
+---Q12. COUNTRY THAT HAVE WON THE HIGHEST NUMBER OF MEDALS AND IN WHICH YEAR
+SELECT team, count(medal) as Total, year
+FROM athlete_events
+WHERE medal IN ('gold', 'silver', 'bronze')
+GROUP BY team, year
+ORDER BY Total DESC;
+
+
+-----Q13. MEDAL ATTAINED IN RIO OLYMPICS 2016
+SELECT TOP 5 team, MAX(year) AS year, COUNT(medal) AS numberofGoldmedals
+FROM athlete_events
+WHERE medal = 'gold' AND year = 2016
+GROUP BY team
+ORDER BY numberofGoldmedals DESC;
+
+
+--------Q14. TOTAL NO OF FEMALES ATHLETES IN EACH OLYMPICS
+SELECT sex, COUNT(*) AS FemaleAthletes, year
+FROM athlete_events
+WHERE sex = 'f' AND season = 'summer'
+GROUP BY sex, year
+ORDER BY 3;
+
+
+--Q15. LIST THE TOP 10 MOST POPULAR SPORTS FOR MEN
+select  top 10 event, count(*) as PopularSports
+from athlete_events
+where sex = 'm'
+group by event
+order by 2 desc;
+
+--Q16. MEDALS COUNT BY CITY-------
+SELECT
+    City,
+    SUM(CASE WHEN Medal = 'gold' THEN 1 ELSE 0 END) AS GoldMedals,
+    SUM(CASE WHEN Medal = 'silver' THEN 1 ELSE 0 END) AS SilverMedals,
+    SUM(CASE WHEN Medal = 'bronze' THEN 1 ELSE 0 END) AS BronzeMedals
+FROM
+    athlete_events
+WHERE
+    Medal IN ('gold', 'silver', 'bronze')
+GROUP BY
+    City
+ORDER BY
+    City;
+
+	-------------------Q17. GENDER DISTRIBUTION----------------------
+
+	SELECT
+    Year,
+    SUM(CASE WHEN Sex = 'M' THEN 1 ELSE 0 END) AS MaleCount,
+    SUM(CASE WHEN Sex = 'F' THEN 1 ELSE 0 END) AS FemaleCount,
+    COUNT(*) AS TotalAthletes,
+    (SUM(CASE WHEN Sex = 'M' THEN 1 ELSE 0 END) * 100.0) / COUNT(*) AS MalePercentage,
+    (SUM(CASE WHEN Sex = 'F' THEN 1 ELSE 0 END) * 100.0) / COUNT(*) AS FemalePercentage
+FROM
+    athlete_events
+GROUP BY
+    Year
+ORDER BY
+    Year;
+
+-------------Q18.  TOP 5 HIGH-PERFORMING CITY WITH GOLDMEDALS------------
+
+	SELECT top 5
+    City,
+    COUNT(Medal) AS TotalGoldMedals
+FROM
+    athlete_events
+WHERE
+    Medal = 'gold'
+GROUP By 
+        city
+ORDER BY
+    TotalGoldMedals DESC;
+
+	
+-------------------Q19. the average age of medal-winning athletes in different sports or countries.---------------
+	SELECT
+    Sport,
+    AVG(Age) AS AverageAge
+FROM
+    athlete_events
+WHERE
+    Medal IN ('gold', 'silver', 'bronze')
+GROUP BY
+    Sport
+ORDER BY
+    AverageAge DESC;	
