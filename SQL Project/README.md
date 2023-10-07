@@ -1,4 +1,4 @@
-**SQL PROJECT ON OLYMPICS **
+                    **SQL PROJECT ON OLYMPICS **
 -------------------------------------------------------------------------
 Title: Olympics(1896 - 2016)
 Tool used: MS SQL Server
