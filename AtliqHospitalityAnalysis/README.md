@@ -11,11 +11,11 @@ To bounce back the managing director decided to onboard a Business and Data Inte
                                                                         Data Model
   ![Screenshot 2023-12-28 090157](https://github.com/venkateshkadari493/Project-Portfolio/assets/144048777/7a7e794d-3717-4369-aae8-565963765273)
                                                                     
-                                                                        Report(1)
+                                                                        Report
                                                                         
   ![Screenshot 2023-12-28 090223](https://github.com/venkateshkadari493/Project-Portfolio/assets/144048777/000662e5-ea74-4f6b-9cb0-cc4c88cf9a27)
 
-                                                                        Report(2)
+                                                                        Report
                            
 ![Screenshot 2023-12-28 090241](https://github.com/venkateshkadari493/Project-Portfolio/assets/144048777/44926cd5-2aa3-40da-a27d-2e37c39d82f2)
 
