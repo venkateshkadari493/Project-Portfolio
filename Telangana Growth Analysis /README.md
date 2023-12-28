@@ -41,8 +41,11 @@ In this Project, I'm Venkatesh Kadari, an aspiring data analyst, and I'm taking 
                                                                                    
                                                              Task
 "Unlocking Telangana's Growth: Analyzing Stamp Registration, Transportation, and Ts-Ipass Data"
+
 "Decoding Trends: Understanding Growth Opportunities in Telangana's Government Departments"
+
 "Statewide Insights: Correlating Stamp Registration, Transportation, and Ts-Ipass for Holistic Understanding"
+
 "Visualizing Telangana's Progress: Patterns and Opportunities Across Key Departments"  
 
                                                          Learnings
