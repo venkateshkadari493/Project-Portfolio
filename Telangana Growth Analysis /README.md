@@ -50,7 +50,9 @@ In this Project, I'm Venkatesh Kadari, an aspiring data analyst, and I'm taking 
 
                                                          Learnings
 "Mastered Custom Shape Mapping with JSON for Interactive Data Visualization."
+
 "Explored Key Sectors and Initiatives in Telangana for a Holistic Perspective."
+
 "Acquired Insights into Telangana's Policies and Initiatives for Informed Analysis."      
 
                                                      Key Insights:
