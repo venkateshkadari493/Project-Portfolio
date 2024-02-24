@@ -6,3 +6,5 @@ The music retail sector is leveraging data analysis to gain valuable insights fo
 
                                                         **Tables:**
 'employee,' 'customer,' 'invoice,' 'track,' 'playlist,' 'artist,' 'album,''media_type,' and 'genre.' These tables contain information about employees, customers, sales transactions, music tracks, playlists, artists, albums, and genres.
+
+                                                     **Database Schema**
