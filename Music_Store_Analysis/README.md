@@ -14,3 +14,9 @@ The music retail sector is leveraging data analysis to gain valuable insights fo
                                                      **Schema - Music Store Database**
 <img width="594" alt="schema_diagram" src="https://github.com/venkateshkadari493/Project-Portfolio/assets/144048777/3807f663-a18d-405f-973f-0fe9be6e09d9">
 
+👉 Approach:
+
+📝Understanding the dataset
+
+📝Analyzing with SQL queries
+
