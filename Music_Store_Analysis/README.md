@@ -1,6 +1,10 @@
                                             **SQL_Project_Music_Store_Analysis**
 SQL project to analyze online music store data
 
+👉 Title:Music_Store_Analysis
+
+👉 Tool used: MS SQL Server
+
                                                       **Objective:**
 The music retail sector is leveraging data analysis to gain valuable insights for informed decision-making and operational optimization, as music stores now serve as hubs for data generated from various aspects of their operations.
 
